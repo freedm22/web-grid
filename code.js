@@ -1,8 +1,27 @@
+/**MAUREL DAN*/
+
 document.addEventListener("DOMContentLoaded", () => {
   // Initial clean up. DO NOT REMOVE.
   initialCleanup();
 
-  // Hey! Pssst! In here ...
+  /** to add a line when butten is clicked */
+  document.getElementById("btn-add-line").addEventListener("click",
+    () => {
+      for (let i=0; i<10; i++)
+      {
+        div = document.createElement("div");
+        document.getElementById("grid").append(div)
+      }
+    });
+
+  for (let square of document.getElementById("grid").children)
+  {
+    square.addEventListener("click",(event)=>
+    {
+      event.target.style.backgroundColor="blue"
+    }    
+    )
+  }
 });
 
 /**
